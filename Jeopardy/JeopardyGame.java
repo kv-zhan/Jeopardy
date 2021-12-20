@@ -197,19 +197,20 @@ public class JeopardyGame {
             while(true) {
                 char input = c.getChar();
                 if((input + "").toUpperCase().equals("A")) {
-                    questionRow = 0;
-                } else if((input + "").toUpperCase().equals("B")) {
                     questionRow = 1;
-                } else if((input + "").toUpperCase().equals("C")) {
+                } else if((input + "").toUpperCase().equals("B")) {
                     questionRow = 2;
-                } else if((input + "").toUpperCase().equals("D")) {
+                } else if((input + "").toUpperCase().equals("C")) {
                     questionRow = 3;
+                } else if((input + "").toUpperCase().equals("D")) {
+                    questionRow = 4;
                 } else if((input + "").toUpperCase().equals("E")) {
-                questionRow = 4;
+                    questionRow = 5;
                 } 
-                if(questionRow != -1) {
+                if(questionRow != 0) {
                     c.setCursor(32, 3);
                     c.print((input + "").toUpperCase());
+                    questionRow--;
                     break;
                 }
             }
@@ -264,7 +265,7 @@ public class JeopardyGame {
                 timer.clockClose();
                 c.setCursor(19,14 + answer.length());
                 c.print("?");
-                if(answer.equals(gameCategory.answers[questionRow][questionColumn])) {
+                if(answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
                     if(!timer.clockQuery()) {
@@ -302,7 +303,7 @@ public class JeopardyGame {
                     timer.clockClose();
                     c.setCursor(19,14 + answer.length());
                     c.print("?");
-                    if(answer.equals(gameCategory.answers[questionRow][questionColumn])) {
+                    if(answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
                         if(!timer.clockQuery()) {
