@@ -251,7 +251,7 @@ public class JeopardyGame {
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
                 c.drawString(gameCategory.questions[questionRow][questionColumn], 40, 250);
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
-                c.drawString("(" + gameCategory.categoryName[questionColumn] + ")", 40, 280);
+                c.drawString("(" + gameCategory.categoryName[questionColumn] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
                 c.setColor(Color.white);
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
                 c.drawString("Your Answer(" + playerNames[whoseTurn] + "):", 40, 340);
@@ -289,7 +289,7 @@ public class JeopardyGame {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
                     c.drawString(gameCategory.questions[questionRow][questionColumn], 40, 250);
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
-                    c.drawString("(" + gameCategory.categoryName[questionColumn] + ")", 40, 280);
+                    c.drawString("(" + gameCategory.categoryName[questionColumn] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
                     c.setColor(Color.white);
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
                     c.drawString("Your Answer(" + playerNames[whoseTurn] + "):", 40, 340);
