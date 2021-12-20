@@ -35,7 +35,7 @@ public class JeopardyGame {
     
     private static void pauseProgram(int state) throws IOException {
         if(state == 0) {
-            //print instructions for keys
+            //main menu -> leaderboard/mainMenu/newGame/goodbye
             while(true) {
                 char input = c.getChar();
                 if((int)input == 10) {
@@ -48,10 +48,10 @@ public class JeopardyGame {
                     instructions();
                 }
             }
-        ///main menu -> leaderboard/mainMenu/newGame/goodbye
         } else if (state == 1) {
-            //press any key to continue
+            //leaderboard/instructions -> mainMenu
             c.getChar();
+            mainMenu();
         } else if (state == 2) {
         //enterNames pause
         } else if (state == 3) {
