@@ -3,9 +3,9 @@ import hsa.*;
 import java.lang.*;
 
 public class Clock implements Runnable {
-    private static Console c;
+    private static Console clockCon;
     public static int time;
-    public boolean running;
+    private boolean running;
     
     public Clock() {
         running = true;
@@ -13,9 +13,9 @@ public class Clock implements Runnable {
     
     public void clockRun() {
         time = 30;
-        c = new Console(20, 40);
+        clockCon = new Console(20, 40);
         while(time >= 0 && running) {
-            c.println(time);
+            clockCon.println(time);
             //Animation stuff
             try {
                 Thread.sleep(1000);
@@ -31,7 +31,7 @@ public class Clock implements Runnable {
     
     public void clockClose() {
         running = false;
-        c.close();
+        clockCon.close();
     }
     
     public void run() {
