@@ -17,6 +17,8 @@ public class JeopardyGame {
     private static String playerNames[];
     private static int playerPoints[];
     private static Clock timer;
+    private static int questionRow;
+    private static int questionColumn;
   
     public JeopardyGame (int size) {
         c = new Console(33, 100);
@@ -158,10 +160,6 @@ public class JeopardyGame {
         splashScreen();
         mainMenu();
     }
-
-    private static void selectQuestion() throws IOException {
-    
-    }
     
     private static void newGame() throws IOException {
         enterNames();
@@ -172,7 +170,7 @@ public class JeopardyGame {
         while(mainBoard.incomplete()) {
             title();
             mainBoard.drawBoard(1);
-            //select question
+            selectQuestion();
             runQuestion(1);
         }
         mainBoard.resetAnswered();
@@ -181,7 +179,7 @@ public class JeopardyGame {
         while(mainBoard.incomplete()) {
             title();
             mainBoard.drawBoard(2);
-            //select question
+            selectQuestion();
             runQuestion(2);
         }
         mainBoard.resetAnswered();
@@ -192,12 +190,7 @@ public class JeopardyGame {
         playerPoints[turn] += points;
     }
     
-    private static void runQuestion(int level) throws IOException {
-        if(level == 3) {
-            //level 3 question
-        } else {
-            int questionRow = -1;
-            int questionColumn = -1;
+    private static void selectQuestion () {
             c.setColor(Color.white);
             c.setFont(new Font("MonoSpaced", Font.BOLD, 17));
             c.drawString(playerNames[whoseTurn] + ", enter the row for the question you wish to answer:", 20, 600);
@@ -243,6 +236,13 @@ public class JeopardyGame {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
+    }
+    
+    private static void runQuestion(int level) throws IOException {
+        if(level == 3) {
+            //level 3 question
+            pauseProgram(3);
+        } else {
             c.setColor(backgroundColor);
             c.fillRect(20, 580, 1000, 25);
             if(mainBoard.queryQuestion(questionRow,questionColumn)) {
@@ -259,6 +259,8 @@ public class JeopardyGame {
                 c.print("What is ");
                 runClock();
                 String answer = c.readLine();
+                c.setCursor(19,14);
+                c.print(answer);
                 timer.clockClose();
                 c.setCursor(19,14 + answer.length());
                 c.print("?");
@@ -278,7 +280,10 @@ public class JeopardyGame {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.red);
                     c.drawString("That is incorrect.", 40, 500);
-                    new Message(playerNames[whoseTurn] + ", here's your chance to steal");
+                    c.setColor(Color.white);
+                    c.drawString(playerNames[whoseTurn] + ", here's your chance to steal.", 40, 540);
+                    c.drawString("Press any key to continue.", 40, 600);
+                    c.getChar();
                     title();
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
                     c.drawString(gameCategory.questions[questionRow][questionColumn], 40, 250);
@@ -290,9 +295,11 @@ public class JeopardyGame {
                     c.fillRect(10, 350, 790, 40);
                     c.setCursor(19,6);
                     c.print("What is ");
-                    //runClock();
+                    runClock();
                     answer = c.readLine();
-                    //timer.clockClose();
+                    c.setCursor(19,14);
+                    c.print(answer);
+                    timer.clockClose();
                     c.setCursor(19,14 + answer.length());
                     c.print("?");
                     if(answer.equals(gameCategory.answers[questionRow][questionColumn])) {
@@ -314,9 +321,9 @@ public class JeopardyGame {
                 c.setColor(new Color(248, 236, 208));
                 c.drawString("Correct Answer: What is " + gameCategory.answers[questionRow][questionColumn] + "?", 40, 450);
                 mainBoard.removeQuestion(questionRow,questionColumn);
+                pauseProgram(3);
             }
         }
-        pauseProgram(3);
     }
 
     private static void chooseCategories() throws IOException {
