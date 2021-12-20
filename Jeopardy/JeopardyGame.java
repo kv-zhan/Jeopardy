@@ -169,7 +169,7 @@ public class JeopardyGame {
         chooseCategories();
         while(mainBoard.incomplete()) {
             title();
-            mainBoard.drawBoard(1);
+            mainBoard.drawBoard(1, gameCategory.categoryName);
             selectQuestion();
             runQuestion(1);
         }
@@ -178,7 +178,7 @@ public class JeopardyGame {
         chooseCategories();
         while(mainBoard.incomplete()) {
             title();
-            mainBoard.drawBoard(2);
+            mainBoard.drawBoard(2, gameCategory.categoryName);
             selectQuestion();
             runQuestion(2);
         }
