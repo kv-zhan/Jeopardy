@@ -294,7 +294,7 @@ public class JeopardyGame {
         for (int i = 0; i < databaseSize; i++) {
             catDatabase.fill(i, i);
         }
-        //splashScreen();
+        splashScreen();
         mainMenu();
     }
 
