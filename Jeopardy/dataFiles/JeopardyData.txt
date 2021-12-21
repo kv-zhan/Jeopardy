@@ -1,16 +1,76 @@
-C1
-What is Shiv
-noob
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+C1: Kid's games
+Circles and Crosses on a grid.
+tic tac toe
+Jumping, hopping, and landing in the boxes.
+hopscotch
+Also refers to the law searching for a suspect.
+manhunt
+Running to the end, but with rules of the road
+red light green light
+Where down below is warm, you must escape the flow.
+the floor is lava
 
-C2
+C2: Fantasy
+In her hut, a couldron ablaze.
+a witch
+The ferocious scaly beast flys from its cave.
+a dragon
+Its little cone hat and big beard are iconic in the grass.
+a gnome
+Almost a human, but it's rejected emotions.
+a vulcan
+The cousin of the cyclops, this stonemasons work with many hands.
+a hecatoncheire
+
+C3: Board Games
+Rooks are found on the corners of the board.
+chess
+One more card to get rid of...
+UNO
+Blind guesses are made in an ocean of possibility.
+battleship
+A party card game for horrible people.
+cards against humanity
+Trade. Build. Settle.
+catan
+
+C4: Space
+The planet that all people live on.
+earth
+The missions that led to the first moon landing
+apollo
+The smallest gas giant in the solar system.
+neptune
+The new space telesope is named after this person.
+James Webb
+The only spacecraft that has visited Uranus.
+voyager 2
+
+C5: Simple History
+The year of the war of 1812.
+1812
+The only emperor of France.
+napoleon
+This revolutionary invention used morse code to send messages.
+telegraph
+The year that the Cuban Missile Crisis happened.
+1962
+The German philosopher which helped Carl Marx create The Communist Manifesto
+Friedrich Engels
+
+C6: Java basics
+The starting index of any String.
+0
+Declaration and initialization must be done for these.
+variables
+The method that instantiates a class.
+class constructor
+A class that permits users to read a file.
+BufferedReader
+The maximum positive number an integer variable can store.
+2147483647
+
+C7: Human body
 TEST
 A1
 Q2
@@ -22,7 +82,7 @@ A4
 Q5
 A5
 
-C3
+C8: Geography
 TEST
 A1
 Q2
@@ -34,7 +94,7 @@ A4
 Q5
 A5
 
-C4
+C9: Music class
 TEST
 A1
 Q2
@@ -46,67 +106,7 @@ A4
 Q5
 A5
 
-C5
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-C6
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-C7
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-C8
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-C9
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-C10
+C10: Sports
 TEST
 A1
 Q2
