@@ -280,7 +280,7 @@ public class JeopardyGame {
         c.print("Player 2, your name is: " + playerNames[1]);
         c.setColor(new Color(248, 236, 208));
         c.setFont(new Font("MonoSpaced", Font.PLAIN, 18));
-        c.drawString("Press any key to go back to main menu", 20, 650);
+        c.drawString("Press any key to continue", 20, 650);
         pauseProgram(3);
     }
 
