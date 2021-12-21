@@ -348,7 +348,7 @@ public class JeopardyGame {
         c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
         c.drawString("Each player will receive a question.", 125, 400);
         c.drawString("Whoever answers in the least amount", 127, 440);
-        c.drawString("of time will receive 1500 points.", 145, 480);
+        c.drawString("of time will receive 1000 points.", 145, 480);
         c.drawString("Press any key to continue", 200, 600);
         pauseProgram(3);
         runQuestion(3);
@@ -357,12 +357,12 @@ public class JeopardyGame {
         c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
         if(answerTime[0] < answerTime[1]) {
             c.drawString(playerNames[0] + " was faster", 175, 400);
-            c.drawString("and will receive 1500 points.", 175, 430);
-            playerPoints[0] += 1500;
+            c.drawString("and will receive 1000 points.", 175, 430);
+            playerPoints[0] += 1000;
         } else if(answerTime[1] < answerTime[0]) {
             c.drawString(playerNames[1] + " was faster", 175, 400);
-            c.drawString("and will receive 1500 points.", 175, 430);
-            playerPoints[1] += 1500;
+            c.drawString("and will receive 1000 points.", 175, 430);
+            playerPoints[1] += 1000;
         } else if(answerTime[0] == answerTime[1]) {
             c.drawString("Both players were equally fast", 175, 400);
             c.drawString("so neither will receive points.", 175, 430);
