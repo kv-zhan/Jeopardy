@@ -49,7 +49,7 @@ public class JeopardyGame {
                 }
             }
         } else if (state == 1) {
-            //instructions -> mainMenu
+            //instructions/win screen -> mainMenu
             c.getChar();
             mainMenu();
         } else if (state == 2) {
@@ -348,17 +348,54 @@ public class JeopardyGame {
         pauseProgram(3);
         //Winning screen
         if(playerPoints[0] > playerPoints[1]) {
-            //Winner is playerNames[0] with a score of playerPoints[0]
+            c.setColor(backgroundColor);
+            c.fillRect(10, 10, 790, 650);
+            c.setColor(new Color(248, 236, 208));
+            c.fillRoundRect(100,30,600,180, 35, 35);
+            c.setColor(backgroundColor);
+            c.fillRoundRect(120,50,560,140, 25, 25);
+            c.setColor(new Color(248, 236, 208));
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 28));
+            c.drawString("Congratulations, " + playerNames[0] + "!", 140, 80);
+            c.drawString("You won this game of Jeopardy", 140, 118);
+            c.drawString("with <" + playerPoints[0] + "> points!", 140, 156);
             highScores.updateLeaderboard(playerNames[0], playerPoints[0]);
         } else if(playerPoints[0] < playerPoints[1]) {
-            //Winner is playerNames[1] with a score of playerPoints[1]
+            c.setColor(backgroundColor);
+            c.fillRect(10, 10, 790, 650);
+            c.setColor(new Color(248, 236, 208));
+            c.fillRoundRect(100,30,600,180, 35, 35);
+            c.setColor(backgroundColor);
+            c.fillRoundRect(120,50,560,140, 25, 25);
+            c.setColor(new Color(248, 236, 208));
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 28));
+            c.drawString("Congratulations, " + playerNames[1] + "!", 140, 80);
+            c.drawString("You won this game of Jeopardy", 140, 118);
+            c.drawString("with <" + playerPoints[1] + "> points!", 140, 156);
             highScores.updateLeaderboard(playerNames[1], playerPoints[1]);
         } else if(playerPoints[0] == playerPoints[1]) {
-            //playerNames[0] and playerNames[1] tied with a score of playerPoints[0]
+            c.setColor(backgroundColor);
+            c.fillRect(10, 10, 790, 650);
+            c.setColor(new Color(248, 236, 208));
+            c.fillRoundRect(100,30,600,180, 35, 35);
+            c.setColor(backgroundColor);
+            c.fillRoundRect(120,50,560,140, 25, 25);
+            c.setColor(new Color(248, 236, 208));
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 28));
+            c.drawString(playerNames[0] + " & " + playerNames[1] + "!", 140, 80);
+            c.drawString("You tied this game of Jeopardy", 140, 118);
+            c.drawString("with <" + playerPoints[1] + "> points!", 140, 156);
             highScores.updateLeaderboard(playerNames[0], playerPoints[0]);            
             highScores.updateLeaderboard(playerNames[1], playerPoints[1]);
         } 
-        mainMenu();
+        c.drawString("Thank you for playing Jeopardy. You", 100, 300);
+        c.drawString("may continue to the main menu,", 130, 340);
+        c.drawString("where you may see your score on", 120, 380);
+        c.drawString("the leaderboard.", 250, 420);
+        c.setColor(new Color(248, 236, 208));
+        c.setFont(new Font("MonoSpaced", Font.PLAIN, 18));
+        c.drawString("Press any key to continue", 20, 650);
+        pauseProgram(1);
     }
 
     private static void updatePoints(int turn, int points) {
