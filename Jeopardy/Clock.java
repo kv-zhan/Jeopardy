@@ -36,7 +36,7 @@ public class Clock implements Runnable {
     }
 
     public boolean clockQuery () {
-        return time == 0;
+        return time != 0;
     }
 
 
