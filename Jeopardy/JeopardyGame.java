@@ -24,13 +24,14 @@ public class JeopardyGame {
         c = new Console(33, 100);
         databaseSize = size;
         catDatabase = new Category(databaseSize);
-        gameCategory = new Category(6);
+        gameCategory = new Category(11);
         categoryNum = new int[databaseSize];
         mainBoard = new JeopardyBoard(c);
         highScores = new Leaderboard(c);
         backgroundColor = new Color(7, 55, 99);
         playerNames = new String[2];
         playerPoints = new int[2];
+        timer = new Clock();
     }
 
     private static void pauseProgram(int state) throws IOException {
@@ -289,7 +290,7 @@ public class JeopardyGame {
         for (int i = 0; i < databaseSize; i++) {
             catDatabase.fill(i, i);
         }
-        splashScreen();
+        //splashScreen();
         mainMenu();
     }
 
@@ -400,6 +401,8 @@ public class JeopardyGame {
                 c.print("What is ");
                 runClock();
                 String answer = c.readLine();
+                c.setColor(Color.white);
+                c.fillRect(0,0,10,660);
                 c.setCursor(19, 14);
                 c.print(answer);
                 timer.clockClose();
@@ -438,6 +441,8 @@ public class JeopardyGame {
                     c.print("What is ");
                     runClock();
                     answer = c.readLine();
+                    c.setColor(Color.white);
+                    c.fillRect(0,0,10,660);
                     c.setCursor(19, 14);
                     c.print(answer);
                     timer.clockClose();
@@ -477,19 +482,18 @@ public class JeopardyGame {
             categoryNum[swap] = categoryNum[i];
             categoryNum[i] = temp;
         }
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 11; i++) {
             gameCategory.fill(categoryNum[i], i);
         }
     }
 
     private static void runClock() {
-        timer = new Clock();
         Thread t = new Thread(timer);
         t.start();
     }
 
     public static void main(String[] args) throws IOException {
-        JeopardyGame j = new JeopardyGame(10);
+        JeopardyGame j = new JeopardyGame(11);
         j.gameStart();
     }
 }
