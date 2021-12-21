@@ -423,7 +423,7 @@ public class JeopardyGame {
             c.fillRect(20, 580, 1000, 25);
             if (mainBoard.queryQuestion(questionRow, questionColumn + 5)) {
                 title();
-                c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
                 c.drawString(gameCategory.questions[questionRow][questionColumn + 5], 40, 250);
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
                 c.drawString("(" + gameCategory.categoryName[questionColumn + 5] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
@@ -463,7 +463,7 @@ public class JeopardyGame {
                     c.drawString("Press any key to continue.", 40, 600);
                     c.getChar();
                     title();
-                    c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
+                    c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
                     c.drawString(gameCategory.questions[questionRow][questionColumn + 5], 40, 250);
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
                     c.drawString("(" + gameCategory.categoryName[questionColumn + 5] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
@@ -510,7 +510,7 @@ public class JeopardyGame {
             c.fillRect(20, 580, 1000, 25);
             if (mainBoard.queryQuestion(questionRow, questionColumn)) {
                 title();
-                c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
                 c.drawString(gameCategory.questions[questionRow][questionColumn], 40, 250);
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
                 c.drawString("(" + gameCategory.categoryName[questionColumn] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
@@ -550,7 +550,7 @@ public class JeopardyGame {
                     c.drawString("Press any key to continue.", 40, 600);
                     c.getChar();
                     title();
-                    c.setFont(new Font("MonoSpaced", Font.BOLD, 50));
+                    c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
                     c.drawString(gameCategory.questions[questionRow][questionColumn], 40, 250);
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
                     c.drawString("(" + gameCategory.categoryName[questionColumn] + " for " + (100 * level * (questionRow + 1)) + ")", 40, 280);
