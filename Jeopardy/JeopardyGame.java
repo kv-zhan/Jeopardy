@@ -338,6 +338,18 @@ public class JeopardyGame {
         c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
         c.drawString("Press any key to continue", 200, 600);
         pauseProgram(3);
+        //Winning screen
+        if(playerPoints[0] > playerPoints[1]) {
+            //Winner is playerNames[0] with a score of playerPoints[0]
+            highScores.updateLeaderboard(playerNames[0], playerPoints[0]);
+        } else if(playerPoints[0] < playerPoints[1]) {
+            //Winner is playerNames[1] with a score of playerPoints[1]
+            highScores.updateLeaderboard(playerNames[1], playerPoints[1]);
+        } else if(playerPoints[0] == playerPoints[1]) {
+            //playerNames[0] and playerNames[1] tied with a score of playerPoints[0]
+            highScores.updateLeaderboard(playerNames[0], playerPoints[0]);            
+            highScores.updateLeaderboard(playerNames[1], playerPoints[1]);
+        } 
     }
 
     private static void updatePoints(int turn, int points) {
@@ -424,7 +436,7 @@ public class JeopardyGame {
                 if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn + 5].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
-                    if (!timer.clockQuery()) {
+                    if (timer.clockQuery()) {
                         c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                         playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         changeTurn();
@@ -549,7 +561,7 @@ public class JeopardyGame {
                     if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
-                        if (!timer.clockQuery()) {
+                        if (timer.clockQuery()) {
                             c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
