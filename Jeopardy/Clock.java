@@ -36,7 +36,6 @@ public class Clock implements Runnable {
     }
 
     public boolean clockQuery () {
-        System.out.println(time);
         return time <= 0;
     }
 
