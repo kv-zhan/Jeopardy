@@ -436,7 +436,7 @@ public class JeopardyGame {
                 if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn + 5].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
-                    if (timer.clockQuery()) {
+                    if (!timer.clockQuery()) {
                         c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                         playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         changeTurn();
@@ -476,7 +476,7 @@ public class JeopardyGame {
                     if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn + 5].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
-                        if (timer.clockQuery()) {
+                        if (!timer.clockQuery()) {
                             c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
@@ -521,7 +521,7 @@ public class JeopardyGame {
                 if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
-                    if (timer.clockQuery()) {
+                    if (!timer.clockQuery()) {
                         c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                         playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         changeTurn();
@@ -561,7 +561,7 @@ public class JeopardyGame {
                     if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
-                        if (timer.clockQuery()) {
+                        if (!timer.clockQuery()) {
                             c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
