@@ -5,15 +5,18 @@ import java.lang.*;
 public class Clock implements Runnable {
     private Console clockCon;
     public int time;
-    private boolean running = true;
+    private boolean running;
 
     public Clock () {
         running = true;
+        clockCon = new Console (16, 40);
+        clockCon.setColor (new Color (1, 55, 99));
+        clockCon.fillRect (10, 10, 390, 390);
     } //class constructor
 
     public void clockRun () {
+        running = true;
         time = 30;
-        clockCon = new Console (16, 40);
         clockCon.setColor (new Color (1, 55, 99));
         clockCon.fillRect (10, 10, 390, 390);
         clockCon.setFont (new Font ("Monospaced", Font.PLAIN, 200));
@@ -26,7 +29,6 @@ public class Clock implements Runnable {
                 clockCon.setColor (Color.white);
                 clockCon.drawString (time + "", 45, 220);
                 Thread.sleep (1000);
-                
                 time--;
             } catch (InterruptedException e) {
             }
@@ -40,7 +42,8 @@ public class Clock implements Runnable {
 
     public void clockClose () {
         running = false;
-        clockCon.close ();
+        clockCon.setColor (new Color (1, 55, 99));
+        clockCon.fillRect (10, 10, 390, 390);
     }
 
     public void run () {
