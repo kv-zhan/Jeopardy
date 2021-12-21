@@ -49,11 +49,17 @@ public class JeopardyGame {
                 }
             }
         } else if (state == 1) {
-            //leaderboard/instructions -> mainMenu
+            //instructions -> mainMenu
             c.getChar();
             mainMenu();
         } else if (state == 2) {
-            //enterNames pause
+            //leaderboard -> mainMenu/clear leaderboard
+            if((c.getChar() + "").toUpperCase().equals("C")) {
+                highScores.clearLeaderboard();
+                leaderboard();
+            } else {
+                mainMenu();
+            }
         } else if (state == 3) {
             //press any key to continue
             c.getChar();
@@ -225,16 +231,15 @@ public class JeopardyGame {
 
     private static void leaderboard() throws IOException {
         title();
-        for (int i = 0; i < 14; i++) {
-            highScores.updateLeaderboard(i + "", i);
-        }
         highScores.printLeaderboard();
-        highScores.clearLeaderboard();
-        pauseProgram(1);
+        c.setColor(new Color(248, 236, 208));
+        c.setFont(new Font("MonoSpaced", Font.PLAIN, 18));
+        c.drawString("Press <C> to clear the leaderboard", 20, 620);
+        c.drawString("Press any key to go back to main menu", 20, 650);
+        pauseProgram(2);
     }
 
     private static void goodbye() throws IOException {
-        highScores.clearLeaderboard();
         System.exit(0);
     }
 
@@ -350,6 +355,7 @@ public class JeopardyGame {
             highScores.updateLeaderboard(playerNames[0], playerPoints[0]);            
             highScores.updateLeaderboard(playerNames[1], playerPoints[1]);
         } 
+        mainMenu();
     }
 
     private static void updatePoints(int turn, int points) {
