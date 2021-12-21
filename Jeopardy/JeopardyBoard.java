@@ -2,7 +2,7 @@ import java.awt.*;
 import hsa.Console;
 
 public class JeopardyBoard {
-    public boolean answered[][] = new boolean[5][5];
+    public boolean answered[][] = new boolean[5][10];
     private Console c;
     private Color fillColor = new Color(255,220,100);
     private Color blankColor = new Color(80, 80, 80);
@@ -13,7 +13,7 @@ public class JeopardyBoard {
     
     public void resetAnswered() {
         for(int i = 0; i < 5; i++) {
-            for(int j = 0; j < 5; j++) {
+            for(int j = 0; j < 10; j++) {
                 answered[i][j] = false;
             }
         }
@@ -32,7 +32,11 @@ public class JeopardyBoard {
             c.fillRoundRect(128 + i * 117, 177, 111, 51, 15, 15);
             c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
             c.setColor(Color.black);
-            c.drawString(nameArr[i], 132 + i * 117, 205);
+            if(level == 1) {
+                c.drawString(nameArr[i], 132 + i * 117, 205);
+            } else if (level == 2) {
+                c.drawString(nameArr[i + 5], 132 + i * 117, 205);
+            }
         }
         for(int i = 0; i < 5; i++) {
             c.setColor(Color.white);
@@ -60,7 +64,7 @@ public class JeopardyBoard {
         //for the question stuff
         if(level == 3) {
             //draw block for final question
-        } else {
+        } else if (level == 1) {
             for(int i = 0; i < 5; i++) {
                 for(int j = 0; j < 5; j++) {
                     if(!answered[i][j]) {
@@ -84,15 +88,45 @@ public class JeopardyBoard {
                     }
                 }
             }
+        } else if (level == 2) {
+            for(int i = 0; i < 5; i++) {
+                for(int j = 0; j < 5; j++) {
+                    if(!answered[i][j + 5]) {
+                        c.setColor(Color.black);
+                        c.fillRoundRect(126 + j * 117, 235 + i * 57, 115, 55, 15, 15);
+                        c.setColor(fillColor);
+                        c.fillRoundRect(128 + j * 117, 237 + i * 57, 111, 51, 15, 15);
+                        c.setFont(new Font("Serif", Font.BOLD, 40));
+                        c.setColor(Color.black);
+                        if(level == 2 && i == 4) {
+                            c.drawString((i + 1) * 100 * level + "", 140 + j * 117, 280 + i * 57);
+                        } else {
+                            c.drawString((i + 1) * 100 * level + "", 150 + j * 117, 280 + i * 57);
+                        }
+                    //draw the block
+                    } else {
+                        c.setColor(Color.black);
+                        c.fillRoundRect(126 + j * 117, 235 + i * 57, 115, 55, 15, 15);
+                        c.setColor(blankColor);
+                        c.fillRoundRect(128 + j * 117, 237 + i * 57, 111, 51, 15, 15);
+                    }
+                }
+            }
         }
     }
     
-    public boolean incomplete() {
+    public boolean incomplete(int level) {
         boolean check = false;
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < 5; j++) {
-                if(!answered[i][j]) {
-                    check = true;
+                if(level == 1) {
+                    if(!answered[i][j]) {
+                        check = true;
+                    }
+                } else if (level == 2) {
+                    if(!answered[i][j + 5]) {
+                        check = true;
+                    }
                 }
             }
         }
