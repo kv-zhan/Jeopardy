@@ -22,7 +22,7 @@ public class JeopardyGame {
     private static int answerTime[];
 
     public JeopardyGame(int size) {
-        c = new Console(33, 100);
+        c = new Console(33, 100, "Jeopardy!");
         databaseSize = size;
         catDatabase = new Category(databaseSize);
         gameCategory = new Category(12);
