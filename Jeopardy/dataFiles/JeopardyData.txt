@@ -1,4 +1,4 @@
-Kid's Games
+C1: Kid's games
 Circles and Crosses on a grid.
 tic tac toe
 Jumping, hopping, and landing in the boxes.
@@ -10,7 +10,7 @@ red light green light
 Where down below is warm, you must escape the flow.
 the floor is lava
 
-Fantasy
+C2: Fantasy
 In her hut, a couldron ablaze.
 a witch
 The ferocious scaly beast flys from its cave.
@@ -22,7 +22,7 @@ a vulcan
 The cousin of the cyclops, this stonemasons work with many hands.
 a hecatoncheire
 
-Board Games
+C3: Board Games
 Rooks are found on the corners of the board.
 chess
 One more card to get rid of...
@@ -34,7 +34,7 @@ cards against humanity
 Trade. Build. Settle.
 catan
 
-Space
+C4: Space
 The planet that all people live on.
 earth
 The missions that led to the first moon landing
@@ -46,7 +46,7 @@ James Webb
 The only spacecraft that has visited Uranus.
 voyager 2
 
-History
+C5: Simple History
 The year of the war of 1812.
 1812
 The only emperor of France.
@@ -58,7 +58,7 @@ The year that the Cuban Missile Crisis happened.
 The German philosopher which helped Carl Marx create The Communist Manifesto
 Friedrich Engels
 
-Java Basics
+C6: Java basics
 The starting index of any String.
 0
 Declaration and initialization must be done for these.
@@ -70,50 +70,50 @@ BufferedReader
 The maximum positive number an integer variable can store.
 2147483647
 
-Human Body
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+C7: Human body
+This part of the eye is responsible for letting light into the retina.
+pupil
+The heart has this many chambers.
+4
+This organ is responsible for storing bile in the digestive system.
+gallbladder
+The only system in the human body that we dont need to survive.
+reproductive system
+The smallest bone in the body.
+Stapes
 
-Geography
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+C8: Geography
+The fifth largest country in the world.
+Brazil
+Portugal's only bordering nation.
+Spain
+The capital city of Russia.
+Moscow
+The easternmost mountain range in canada.
+Appalachian mountains
+The highest tidal change is found here.
+Bay of Fundy
 
-Music Class
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+C9: Music class
+This instrument has a standard 88 keys.
+piano
+The trombone is part of this family of instruments.
+brass
+"F Major" is an example of this.
+key signature
+Two violins, a viola, and a cello is an example of this.
+quartet
+Singing the same thing, but at staggered starting points, is called this.
+canon
 
-Sports
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+C10: Sports
+Beach volleyball is played with this many players per team.
+2
+When a hockey player infringes the rules, they sit here.
+penalty box
+This was the country that basketball was invented in.
+Canada
+In American football, this position is to run pass routes and get open.
+wide reciever
+There this many pool balls on a billiard table.
+16
