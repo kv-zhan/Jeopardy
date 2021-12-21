@@ -621,7 +621,7 @@ public class JeopardyGame {
                         c.drawString("That is incorrect.", 40, 500);
                     }
                 }
-                c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                 c.setColor(new Color(248, 236, 208));
                 c.drawString("Correct Answer: What is " + gameCategory.answers[questionRow][questionColumn] + "?", 40, 450);
                 mainBoard.removeQuestion(questionRow, questionColumn);
