@@ -19,18 +19,20 @@ public class JeopardyGame {
     private static Clock timer;
     private static int questionRow;
     private static int questionColumn;
+    private static int answerTime[];
 
     public JeopardyGame(int size) {
         c = new Console(33, 100);
         databaseSize = size;
         catDatabase = new Category(databaseSize);
-        gameCategory = new Category(11);
+        gameCategory = new Category(12);
         categoryNum = new int[databaseSize];
         mainBoard = new JeopardyBoard(c);
         highScores = new Leaderboard(c);
         backgroundColor = new Color(7, 55, 99);
         playerNames = new String[2];
         playerPoints = new int[2];
+        answerTime = new int[2];
     }
 
     private static void pauseProgram(int state) throws IOException {
@@ -344,6 +346,27 @@ public class JeopardyGame {
         c.setFont(new Font("MonoSpaced", Font.BOLD, 80));
         c.drawString("Round 3", 230, 350);
         c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+        c.drawString("Each player will receive a question.", 125, 400);
+        c.drawString("Whoever answers in the least amount", 127, 440);
+        c.drawString("of time will receive 1500 points.", 145, 480);
+        c.drawString("Press any key to continue", 200, 600);
+        pauseProgram(3);
+        runQuestion(3);
+        runQuestion(3);
+        title();
+        c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+        if(answerTime[0] < answerTime[1]) {
+            c.drawString(playerNames[0] + " was faster", 175, 400);
+            c.drawString("and will receive 1500 points.", 175, 430);
+            playerPoints[0] += 1500;
+        } else if(answerTime[1] < answerTime[0]) {
+            c.drawString(playerNames[1] + " was faster", 175, 400);
+            c.drawString("and will receive 1500 points.", 175, 430);
+            playerPoints[1] += 1500;
+        } else if(answerTime[0] == answerTime[1]) {
+            c.drawString("Both players were equally fast", 175, 400);
+            c.drawString("so neither will receive points.", 175, 430);
+        }
         c.drawString("Press any key to continue", 200, 600);
         pauseProgram(3);
         //Winning screen
@@ -453,7 +476,50 @@ public class JeopardyGame {
 
     private static void runQuestion(int level) throws IOException {
         if (level == 3) {
-            //level 3 question
+            c.setColor(backgroundColor);
+            c.fillRect(20, 580, 1000, 25);
+            title();
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 15));
+            c.drawString(gameCategory.questions[4][10 + whoseTurn], 40, 250);
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
+            c.drawString("(" + gameCategory.categoryName[10 + whoseTurn] + ")", 40, 280);
+            c.setColor(Color.white);
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+            c.drawString("Your Answer(" + playerNames[whoseTurn] + "):", 40, 340);
+            c.fillRect(10, 350, 790, 40);
+            c.setCursor(19, 6);
+            c.print("What is ");
+            runClock();
+            String answer = c.readLine();
+            c.setColor(Color.white);
+            c.fillRect(0,0,10,660);
+            c.setCursor(19, 14);
+            c.print(answer);
+            timer.clockClose();
+            c.setCursor(19, 14 + answer.length());
+            c.print("?");
+            if (answer.toUpperCase().equals(gameCategory.answers[4][10 + whoseTurn].toUpperCase())) {
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
+                c.setColor(Color.green);
+                if (timer.clockQuery() > 0) {
+                    c.drawString("You are correct! You answered in " + (30 - timer.clockQuery()) + " seconds.", 40, 500);
+                    answerTime[whoseTurn] = 30 - timer.clockQuery();
+                } else {
+                    c.drawString("You are correct but you ran out of time.", 40, 500);
+                    answerTime[whoseTurn] = 31;
+                }
+            } else {
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
+                c.setColor(Color.red);
+                c.drawString("That is incorrect.", 40, 500);
+                answerTime[whoseTurn] = 31;
+            }
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
+            c.setColor(new Color(248, 236, 208));
+            c.drawString("Correct Answer: What is " + gameCategory.answers[4][10 + whoseTurn] + "?", 40, 450);
+            c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+            c.drawString("Press any key to continue", 200, 600);
+            changeTurn();
             pauseProgram(3);
         } else if (level == 2){
             c.setColor(backgroundColor);
@@ -482,7 +548,7 @@ public class JeopardyGame {
                 if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn + 5].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
-                    if (!timer.clockQuery()) {
+                    if (timer.clockQuery() > 0) {
                         c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                         playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         changeTurn();
@@ -522,7 +588,7 @@ public class JeopardyGame {
                     if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn + 5].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
-                        if (!timer.clockQuery()) {
+                        if (timer.clockQuery() > 0) {
                             c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
@@ -534,7 +600,7 @@ public class JeopardyGame {
                         c.drawString("That is incorrect.", 40, 500);
                     }
                 }
-                c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                 c.setColor(new Color(248, 236, 208));
                 c.drawString("Correct Answer: What is " + gameCategory.answers[questionRow][questionColumn + 5] + "?", 40, 450);
                 mainBoard.removeQuestion(questionRow, questionColumn + 5);
@@ -569,7 +635,7 @@ public class JeopardyGame {
                 if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                     c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                     c.setColor(Color.green);
-                    if (!timer.clockQuery()) {
+                    if (timer.clockQuery() > 0) {
                         c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                         playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         changeTurn();
@@ -609,7 +675,7 @@ public class JeopardyGame {
                     if (answer.toUpperCase().equals(gameCategory.answers[questionRow][questionColumn].toUpperCase())) {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
-                        if (!timer.clockQuery()) {
+                        if (timer.clockQuery() > 0) {
                             c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
@@ -642,7 +708,7 @@ public class JeopardyGame {
             categoryNum[swap] = categoryNum[i];
             categoryNum[i] = temp;
         }
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 12; i++) {
             gameCategory.fill(categoryNum[i], i);
         }
     }
@@ -653,7 +719,7 @@ public class JeopardyGame {
     }
 
     public static void main(String[] args) throws IOException {
-        JeopardyGame j = new JeopardyGame(11);
+        JeopardyGame j = new JeopardyGame(12);
         j.gameStart();
     }
 }
