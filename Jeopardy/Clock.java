@@ -9,7 +9,7 @@ public class Clock implements Runnable {
 
     public Clock () {
         running = true;
-        clockCon = new Console (16, 40);
+        clockCon = new Console (16, 40, "Timer");
         clockCon.setColor (new Color (1, 55, 99));
         clockCon.fillRect (10, 10, 390, 390);
     } //class constructor
