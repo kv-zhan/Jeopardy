@@ -132,7 +132,7 @@ public class Leaderboard {
                 } else {
                     c.drawString((i + 1) + ". " + str, 150, 220 + i * 40);
                 }
-                c.drawString("Score: " + input.readLine(), 400, 220 + i * 40);
+                c.drawString("Score: $" + input.readLine(), 400, 220 + i * 40);
             }
             //if the line is empty and this is the first iteration of the for loop, 
             else if (str == null && i == 0) {
