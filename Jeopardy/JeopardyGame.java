@@ -79,8 +79,15 @@ public class JeopardyGame {
     }
     
     private static void mainMenu() throws IOException {
-        title();
-        c.drawString("Main Menu", 100, 200);
+        title(); 
+        c.drawString("Main Menu", 170, 200);
+        c.setFont(new Font("MonoSpaced", Font.PLAIN, 30));
+        c.drawString("Press <Enter> to start your first ",80,300);
+        c.drawString("Jeopardy Game!",80,340);
+        c.drawString("Press <L> to view the leaderboard.",80,400);
+        c.drawString("Press <I> to view the instructions.",80,450);
+        c.drawString("Press <Backspace> to exit Jeopardy.",80,500);
+        c.setFont(new Font("MonoSpaced", Font.BOLD, 90));
         pauseProgram(0);
     }
     
