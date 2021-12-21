@@ -302,6 +302,10 @@ public class JeopardyGame {
         while (mainBoard.incomplete()) {
             title();
             mainBoard.drawBoard(1, gameCategory.categoryName);
+            c.setFont(new Font("Monospaced", Font.BOLD, 25));
+            c.setColor(Color.white);
+            c.drawString(playerNames[0] + ": " + playerPoints[0], 140, 160);
+            c.drawString(playerNames[1] + ": " + playerPoints[1], 380, 160);
             selectQuestion();
             runQuestion(1);
         }
