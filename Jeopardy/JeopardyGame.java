@@ -278,7 +278,10 @@ public class JeopardyGame {
             }
         }
         c.print("Player 2, your name is: " + playerNames[1]);
-        pauseProgram(2);
+        c.setColor(new Color(248, 236, 208));
+        c.setFont(new Font("MonoSpaced", Font.PLAIN, 18));
+        c.drawString("Press any key to go back to main menu", 20, 650);
+        pauseProgram(3);
     }
 
     private static void changeTurn() {
@@ -498,6 +501,8 @@ public class JeopardyGame {
                 c.setColor(new Color(248, 236, 208));
                 c.drawString("Correct Answer: What is " + gameCategory.answers[questionRow][questionColumn + 5] + "?", 40, 450);
                 mainBoard.removeQuestion(questionRow, questionColumn + 5);
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+                c.drawString("Press any key to continue", 200, 600);
                 pauseProgram(3);
             }
         } else if (level == 1){
@@ -583,6 +588,8 @@ public class JeopardyGame {
                 c.setColor(new Color(248, 236, 208));
                 c.drawString("Correct Answer: What is " + gameCategory.answers[questionRow][questionColumn] + "?", 40, 450);
                 mainBoard.removeQuestion(questionRow, questionColumn);
+                c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
+                c.drawString("Press any key to continue", 200, 600);
                 pauseProgram(3);
             }
         }
