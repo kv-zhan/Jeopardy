@@ -1,4 +1,4 @@
-C1: Kid's games
+Kid's Games
 Circles and Crosses on a grid.
 tic tac toe
 Jumping, hopping, and landing in the boxes.
@@ -10,7 +10,7 @@ red light green light
 Where down below is warm, you must escape the flow.
 the floor is lava
 
-C2: Fantasy
+Fantasy
 In her hut, a couldron ablaze.
 a witch
 The ferocious scaly beast flys from its cave.
@@ -22,7 +22,7 @@ a vulcan
 The cousin of the cyclops, this stonemasons work with many hands.
 a hecatoncheire
 
-C3: Board Games
+Board Games
 Rooks are found on the corners of the board.
 chess
 One more card to get rid of...
@@ -34,7 +34,7 @@ cards against humanity
 Trade. Build. Settle.
 catan
 
-C4: Space
+Space
 The planet that all people live on.
 earth
 The missions that led to the first moon landing
@@ -46,7 +46,7 @@ James Webb
 The only spacecraft that has visited Uranus.
 voyager 2
 
-C5: Simple History
+History
 The year of the war of 1812.
 1812
 The only emperor of France.
@@ -58,7 +58,7 @@ The year that the Cuban Missile Crisis happened.
 The German philosopher which helped Carl Marx create The Communist Manifesto
 Friedrich Engels
 
-C6: Java basics
+Java Basics
 The starting index of any String.
 0
 Declaration and initialization must be done for these.
@@ -70,7 +70,7 @@ BufferedReader
 The maximum positive number an integer variable can store.
 2147483647
 
-C7: Human body
+Human Body
 TEST
 A1
 Q2
@@ -82,7 +82,7 @@ A4
 Q5
 A5
 
-C8: Geography
+Geography
 TEST
 A1
 Q2
@@ -94,7 +94,7 @@ A4
 Q5
 A5
 
-C9: Music class
+Music Class
 TEST
 A1
 Q2
@@ -106,7 +106,7 @@ A4
 Q5
 A5
 
-C10: Sports
+Sports
 TEST
 A1
 Q2
