@@ -142,7 +142,7 @@ complementary
 SOH CAH TOA helps you remember sine, cosine and ______.
 tangent
 
-Month:
+Month
 Kwanzaa begins in this month.
 December
 The 1944 invasion of Normandy was in this month.
@@ -154,7 +154,7 @@ July
 Guy Fawkes Day lights up in this month.
 November
 
-Human body:
+Human body
 This part of the eye is responsible for letting light into the retina.
 pupil
 The heart has this many chambers.
@@ -166,7 +166,7 @@ reproductive system
 The smallest bone in the body.
 Stapes
 
-Geography:
+Geography
 The fifth largest country in the world.
 Brazil
 Portugal's only bordering nation.
@@ -178,7 +178,7 @@ Appalachian mountains
 The highest tidal change is found here.
 Bay of Fundy
 
-Music class:
+Music class
 This instrument has a standard 88 keys.
 piano
 The trombone is part of this family of instruments.
@@ -190,7 +190,7 @@ quartet
 Singing the same thing, but at staggered starting points, is called this.
 canon
 
-Sports:
+Sports
 Beach volleyball is played with this many players per team.
 2
 When a hockey player infringes the rules, they sit here.
