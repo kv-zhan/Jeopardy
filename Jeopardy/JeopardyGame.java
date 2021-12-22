@@ -676,7 +676,7 @@ public class JeopardyGame {
                         c.setFont(new Font("MonoSpaced", Font.BOLD, 20));
                         c.setColor(Color.green);
                         if (timer.clockQuery() > 0) {
-                            c.drawString("You are correct! Your score increased by  " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
+                            c.drawString("You are correct! Your score increased by " + (100 * level * (questionRow + 1)) + " points.", 40, 500);
                             playerPoints[whoseTurn] += 100 * level * (questionRow + 1);
                         } else {
                             c.drawString("You are correct, but you ran out of time.", 40, 500);
