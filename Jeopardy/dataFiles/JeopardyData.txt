@@ -142,7 +142,7 @@ complementary
 SOH CAH TOA helps you remember sine, cosine and ______.
 tangent
 
-Months
+Month:
 Kwanzaa begins in this month.
 December
 The 1944 invasion of Normandy was in this month.
@@ -154,50 +154,50 @@ July
 Guy Fawkes Day lights up in this month.
 November
 
-Human Body
-Q1
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+Human body:
+This part of the eye is responsible for letting light into the retina.
+pupil
+The heart has this many chambers.
+4
+This organ is responsible for storing bile in the digestive system.
+gallbladder
+The only system in the human body that we dont need to survive.
+reproductive system
+The smallest bone in the body.
+Stapes
 
-Geography
-Q1
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+Geography:
+The fifth largest country in the world.
+Brazil
+Portugal's only bordering nation.
+Spain
+The capital city of Russia.
+Moscow
+The easternmost mountain range in canada.
+Appalachian mountains
+The highest tidal change is found here.
+Bay of Fundy
 
-Music Class
-Q1
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+Music class:
+This instrument has a standard 88 keys.
+piano
+The trombone is part of this family of instruments.
+brass
+"F Major" is an example of this.
+key signature
+Two violins, a viola, and a cello is an example of this.
+quartet
+Singing the same thing, but at staggered starting points, is called this.
+canon
 
-Sports
-Q1
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
+Sports:
+Beach volleyball is played with this many players per team.
+2
+When a hockey player infringes the rules, they sit here.
+penalty box
+This was the country that basketball was invented in.
+Canada
+In American football, this position is to run pass routes and get open.
+wide reciever
+There this many pool balls on a billiard table.
+16
