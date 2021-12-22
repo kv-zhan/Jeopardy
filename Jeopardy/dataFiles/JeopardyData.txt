@@ -70,54 +70,6 @@ BufferedReader
 The maximum positive number an integer variable can store.
 2147483647
 
-Human Body
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-Geography
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-Music Class
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
-Sports
-TEST
-A1
-Q2
-A2
-Q3
-A3
-Q4
-A4
-Q5
-A5
-
 Capitals
 Taiwan
 Taipei
@@ -131,13 +83,121 @@ Azerbaijan
 Baku
 
 Proverbs
-Birds of a feather flock ______
+Birds of a feather flock ______.
 together
-Still waters ___ ____
+Still waters ___ ____.
 run deep
-The shoemaker's son always goes ______
+The shoemaker's son always goes ______.
 barefoot
-Crosses are ladders that lead to ______
+Crosses are ladders that lead to ______.
 heaven
-If wishes were horses ____ _____ _____
+If wishes were horses ____ _____ _____.
 beggars would ride
+
+Science
+The universal force of attraction.
+gravity
+Invisible rays that can give you a burn.
+UV rays
+A plant that lives and dies in one growing season.
+a perennial
+Playful marine creature named for the shape of its snout.
+a bottlenose dolphin
+It's what RNA stands for.
+ribonucleic acid
+
+Animals
+A group of these black birds is known as a "murder".
+a crow
+Is it a group of this creature or simply a holder of arrows.
+a cobra
+You might find these canines sneaking around your henhouse.
+a fox
+Even if it is a nurse it will do you more harm than good.
+a shark
+Salamanders may not know what this words means but they can gather in one.
+a maelstrom
+
+Medicine
+Latin for "poison".
+a virus
+Under this "effect" people improve upon receiving inert substances.
+placebo
+McBurney's incision is used when removing this organ.
+an appendix
+The Weber hearing test is conducted by striking this instrument.
+a tuning fork
+Your oil-secreting sebaceous glands can produce their own type of this.
+a cyst
+
+Math Terms
+The ratio of circumference to diameter.
+pi
+This diagram is two circles that meet in the middle.
+a Venn diagram
+For 6 & 10, the ____ ______ _______ is 30.
+lowest common multiple
+2 angles whose sum is 90 degrees are this.
+complementary
+SOH CAH TOA helps you remember sine, cosine and ______.
+tangent
+
+Months
+Kwanzaa begins in this month.
+December
+The 1944 invasion of Normandy was in this month.
+June
+The Indianapolis 500 roars to life in this month.
+May
+The Bastille Day Military Parade marches on in this month.
+July
+Guy Fawkes Day lights up in this month.
+November
+
+Human Body
+Q1
+A1
+Q2
+A2
+Q3
+A3
+Q4
+A4
+Q5
+A5
+
+Geography
+Q1
+A1
+Q2
+A2
+Q3
+A3
+Q4
+A4
+Q5
+A5
+
+Music Class
+Q1
+A1
+Q2
+A2
+Q3
+A3
+Q4
+A4
+Q5
+A5
+
+Sports
+Q1
+A1
+Q2
+A2
+Q3
+A3
+Q4
+A4
+Q5
+A5
