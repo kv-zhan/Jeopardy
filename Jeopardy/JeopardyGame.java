@@ -719,7 +719,7 @@ public class JeopardyGame {
     }
 
     public static void main(String[] args) throws IOException {
-        JeopardyGame j = new JeopardyGame(18);
+        JeopardyGame j = new JeopardyGame(24);
         j.gameStart();
     }
 }
