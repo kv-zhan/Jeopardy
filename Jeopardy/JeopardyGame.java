@@ -433,16 +433,30 @@ public class JeopardyGame {
             char input = c.getChar();
             if ((input + "").toUpperCase().equals("A")) {
                 questionRow = 1;
+                c.setCursor(32, 3);
+                c.print((input + "").toUpperCase());
+                questionRow--;
+                break;
             } else if ((input + "").toUpperCase().equals("B")) {
                 questionRow = 2;
+                c.setCursor(32, 3);
+                c.print((input + "").toUpperCase());
+                questionRow--;
+                break;
             } else if ((input + "").toUpperCase().equals("C")) {
                 questionRow = 3;
+                c.setCursor(32, 3);
+                c.print((input + "").toUpperCase());
+                questionRow--;
+                break;
             } else if ((input + "").toUpperCase().equals("D")) {
                 questionRow = 4;
+                c.setCursor(32, 3);
+                c.print((input + "").toUpperCase());
+                questionRow--;
+                break;
             } else if ((input + "").toUpperCase().equals("E")) {
                 questionRow = 5;
-            }
-            if (questionRow != 0) {
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
                 questionRow--;
