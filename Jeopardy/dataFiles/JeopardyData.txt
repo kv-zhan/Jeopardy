@@ -142,7 +142,7 @@ complementary
 SOH CAH TOA helps you remember sine, cosine and ______.
 tangent
 
-Month
+Months
 Kwanzaa begins in this month.
 December
 The 1944 invasion of Normandy was in this month.
@@ -153,6 +153,18 @@ The Bastille Day Military Parade marches on in this month.
 July
 Guy Fawkes Day lights up in this month.
 November
+
+Bread
+They're called grissini in Italian.
+breadsticks
+A round, flat pita-like bread with a name from Farsi.
+naan
+We need to raise the bread so we get this microorganism to do it.
+yeast
+This Scottish quick bread is often consumed with a spot of tea.
+a scone
+Sometimes called "the Mount Everest of bread baking".
+sourdough
 
 Human body
 This part of the eye is responsible for letting light into the retina.
