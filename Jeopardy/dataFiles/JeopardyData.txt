@@ -1,11 +1,11 @@
 Kid's Games
-Circles and Crosses on a grid.
+Circles and crosses on a grid.
 tic tac toe
 Jumping, hopping, and landing in the boxes.
 hopscotch
 Also refers to the law searching for a suspect.
 manhunt
-Running to the end, but with rules of the road
+Running to the end, but with rules of the road.
 red light green light
 Where down below is warm, you must escape the flow.
 the floor is lava
@@ -19,7 +19,7 @@ Its little cone hat and big beard are iconic in the grass.
 gnome
 Almost a human, but it's rejected emotions.
 vulcan
-The cousin of the cyclops, this stonemasons work with many hands.
+The cousin of the cyclops, this stonemason works with many hands.
 hecatoncheire
 
 Board Games
@@ -55,7 +55,7 @@ This revolutionary invention used morse code to send messages.
 telegraph
 The year that the Cuban Missile Crisis happened.
 1962
-The German philosopher which helped Carl Marx create The Communist Manifesto
+The German philosopher who helped Carl Marx create The Communist Manifesto.
 Friedrich Engels
 
 Java Basics
@@ -115,7 +115,7 @@ You might find these canines sneaking around your henhouse.
 fox
 Even if it is a nurse it will do you more harm than good.
 shark
-Salamanders may not know what this words means but they can gather in one.
+Salamanders may not know what this word means but they can gather in one.
 maelstrom
 
 Medicine
@@ -281,7 +281,7 @@ This striped squirrel can gather more than 150 acorns a day.
 chipmunk
 Alice in Wonderland could tell you this creature lives mostly in trees.
 dormouse
-This 2-foot tall South American roden has webbed feet to help it swim.
+This 2-foot tall South American rodent has webbed feet to help it swim.
 capybara
 Lewis and Clark called this rodent a "barking squirrel".
 prairie dog
