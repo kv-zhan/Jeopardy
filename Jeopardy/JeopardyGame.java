@@ -318,10 +318,10 @@ public class JeopardyGame {
         while (mainBoard.incomplete(1)) {
             title();
             mainBoard.drawBoard(1, gameCategory.categoryName);
-            c.setFont(new Font("Monospaced", Font.BOLD, 25));
+            c.setFont(new Font("Monospaced", Font.BOLD, 15));
             c.setColor(Color.white);
-            c.drawString(playerNames[0] + ": $" + playerPoints[0], 140, 160);
-            c.drawString(playerNames[1] + ": $" + playerPoints[1], 380, 160);
+            c.drawString(playerNames[0] + ": $" + playerPoints[0], 140, 145);
+            c.drawString(playerNames[1] + ": $" + playerPoints[1], 140, 165);
             selectQuestion();
             runQuestion(1);
         }
@@ -334,10 +334,10 @@ public class JeopardyGame {
         while (mainBoard.incomplete(2)) {
             title();
             mainBoard.drawBoard(2, gameCategory.categoryName);
-            c.setFont(new Font("Monospaced", Font.BOLD, 25));
+            c.setFont(new Font("Monospaced", Font.BOLD, 15));
             c.setColor(Color.white);
-            c.drawString(playerNames[0] + ": $" + playerPoints[0], 140, 160);
-            c.drawString(playerNames[1] + ": $" + playerPoints[1], 380, 160);
+            c.drawString(playerNames[0] + ": $" + playerPoints[0], 140, 145);
+            c.drawString(playerNames[1] + ": $" + playerPoints[1], 140, 165);
             selectQuestion();
             runQuestion(2);
         }
@@ -428,52 +428,52 @@ public class JeopardyGame {
     private static void selectQuestion() {
         c.setColor(Color.white);
         c.setFont(new Font("MonoSpaced", Font.BOLD, 17));
-        c.drawString(playerNames[whoseTurn] + ", enter the row for the question you wish to answer:", 20, 600);
+        c.drawString(playerNames[whoseTurn] + ", enter the column for the question you wish to answer:", 20, 600);
         while (true) {
             char input = c.getChar();
             if ((input + "").toUpperCase().equals("A")) {
-                questionRow = 1;
+                questionColumn = 1;
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
-                questionRow--;
+                questionColumn--;
                 break;
             } else if ((input + "").toUpperCase().equals("B")) {
-                questionRow = 2;
+                questionColumn = 2;
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
-                questionRow--;
+                questionColumn--;
                 break;
             } else if ((input + "").toUpperCase().equals("C")) {
-                questionRow = 3;
+                questionColumn = 3;
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
-                questionRow--;
+                questionColumn--;
                 break;
             } else if ((input + "").toUpperCase().equals("D")) {
-                questionRow = 4;
+                questionColumn = 4;
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
-                questionRow--;
+                questionColumn--;
                 break;
             } else if ((input + "").toUpperCase().equals("E")) {
-                questionRow = 5;
+                questionColumn = 5;
                 c.setCursor(32, 3);
                 c.print((input + "").toUpperCase());
-                questionRow--;
+                questionColumn--;
                 break;
             }
         }
         c.setColor(backgroundColor);
         c.fillRect(20, 580, 1000, 25);
         c.setColor(Color.white);
-        c.drawString(playerNames[whoseTurn] + ", enter the column for the question you wish to answer:", 20, 600);
+        c.drawString(playerNames[whoseTurn] + ", enter the row for the question you wish to answer:", 20, 600);
         c.setCursor(0, 2);
         while (true) {
             try {
-                questionColumn = Integer.parseInt(c.getChar() + "") - 1;
-                if (questionColumn >= 0 && questionColumn < 5) {
+                questionRow = Integer.parseInt(c.getChar() + "") - 1;
+                if (questionRow >= 0 && questionRow < 5) {
                     c.setCursor(32, 5);
-                    c.print(questionColumn + 1);
+                    c.print(questionRow + 1);
                     break;
                 } else {
                     new Message("Please enter a valid column number.", "Error");
