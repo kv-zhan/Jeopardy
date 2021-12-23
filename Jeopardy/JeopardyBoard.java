@@ -4,8 +4,8 @@ import hsa.Console;
 public class JeopardyBoard {
     public boolean answered[][] = new boolean[5][10];
     private Console c;
-    private Color fillColor = new Color(255,220,100);
-    private Color blankColor = new Color(80, 80, 80);
+    Color fillColor = new Color(255,220,100);
+    Color blankColor = new Color(80, 80, 80);
     
     public JeopardyBoard(Console con) {
         c = con;
