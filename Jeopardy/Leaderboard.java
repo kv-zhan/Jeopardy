@@ -6,7 +6,7 @@ public class Leaderboard {
     private Console c;
     public int scores[];
     public String names[];
-    private Color fillColor = new Color(255,220,100);
+    Color fillColor = new Color(255,220,100);
   
     public Leaderboard(Console con) {
         //initialize console
