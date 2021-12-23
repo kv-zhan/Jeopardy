@@ -6,20 +6,20 @@ import java.lang.*;
 
 public class JeopardyGame {
     private static Console c;
-    private static int databaseSize;
-    private static Category catDatabase;
-    public static Category gameCategory;
-    private static int categoryNum[];
-    private static JeopardyBoard mainBoard;
-    private static Leaderboard highScores;
-    private static int whoseTurn;
-    private static Color backgroundColor;
-    private static String playerNames[];
-    private static int playerPoints[];
-    private static Clock timer;
-    private static int questionRow;
-    private static int questionColumn;
-    private static int answerTime[];
+    static int databaseSize;
+    static Category catDatabase;
+    static Category gameCategory;
+    static int categoryNum[];
+    static JeopardyBoard mainBoard;
+    static Leaderboard highScores;
+    static int whoseTurn;
+    static Color backgroundColor;
+    static String playerNames[];
+    static int playerPoints[];
+    static Clock timer;
+    static int questionRow;
+    static int questionColumn;
+    static int answerTime[];
 
     public JeopardyGame(int size) {
         c = new Console(33, 100, "Jeopardy!");
