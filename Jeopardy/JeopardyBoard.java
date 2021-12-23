@@ -41,22 +41,22 @@ public class JeopardyBoard {
         for(int i = 0; i < 5; i++) {
             c.setColor(Color.white);
             c.setFont(new Font("MonoSpaced", Font.BOLD, 30));
-            c.drawString(i + 1 + "", 173 + i * 117, 545);
+            c.drawString(i + 1 + "", 90, 270 + i * 57);
             switch (i) {
                 case 0:
-                    c.drawString("A", 90, 270 + i * 57);
+                    c.drawString("A", 173 + i * 117, 545);
                     break;
                 case 1:
-                    c.drawString("B", 90, 270 + i * 57);
+                    c.drawString("B", 173 + i * 117, 545);
                     break;
                 case 2:
-                    c.drawString("C", 90, 270 + i * 57);
+                    c.drawString("C", 173 + i * 117, 545);
                     break;
                 case 3:
-                    c.drawString("D", 90, 270 + i * 57);
+                    c.drawString("D", 173 + i * 117, 545);
                     break;
                 case 4:
-                    c.drawString("E", 90, 270 + i * 57);
+                    c.drawString("E", 173 + i * 117, 545);
                     break;
             }
         }
