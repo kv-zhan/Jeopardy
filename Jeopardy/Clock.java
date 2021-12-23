@@ -3,9 +3,9 @@ import hsa.*;
 import java.lang.*;
 
 public class Clock implements Runnable {
-    private Console clockCon;
+    Console clockCon;
     public int time;
-    private boolean running;
+    boolean running;
 
     public Clock () {
         running = true;
