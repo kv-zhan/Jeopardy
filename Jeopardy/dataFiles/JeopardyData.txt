@@ -12,15 +12,15 @@ the floor is lava
 
 Fantasy
 In her hut, a cauldron ablaze.
-a witch
+witch
 The ferocious scaly beast flys from its cave.
-a dragon
+dragon
 Its little cone hat and big beard are iconic in the grass.
-a gnome
+gnome
 Almost a human, but it's rejected emotions.
-a vulcan
+vulcan
 The cousin of the cyclops, this stonemasons work with many hands.
-a hecatoncheire
+hecatoncheire
 
 Board Games
 Rooks are found on the corners of the board.
@@ -100,41 +100,41 @@ gravity
 Invisible rays that can give you a burn.
 UV rays
 A plant that lives and dies in one growing season.
-a perennial
+perennial
 Playful marine creature named for the shape of its snout.
-a bottlenose dolphin
+bottlenose dolphin
 It's what RNA stands for.
 ribonucleic acid
 
 Animals
 A group of these black birds is known as a "murder".
-a crow
+crow
 Is it a group of this creature or simply a holder of arrows.
-a cobra
+cobra
 You might find these canines sneaking around your henhouse.
-a fox
+fox
 Even if it is a nurse it will do you more harm than good.
-a shark
+shark
 Salamanders may not know what this words means but they can gather in one.
-a maelstrom
+maelstrom
 
 Medicine
 Latin for "poison".
-a virus
+virus
 Under this "effect" people improve upon receiving inert substances.
 placebo
 McBurney's incision is used when removing this organ.
-an appendix
+appendix
 The Weber hearing test is conducted by striking this instrument.
-a tuning fork
+tuning fork
 Your oil-secreting sebaceous glands can produce their own type of this.
-a cyst
+cyst
 
 Math Terms
 The ratio of circumference to diameter.
 pi
 This diagram is two circles that meet in the middle.
-a Venn diagram
+Venn diagram
 For 6 & 10, the ____ ______ _______ is 30.
 lowest common multiple
 2 angles whose sum is 90 degrees are this.
@@ -162,7 +162,7 @@ naan
 We need to raise the bread so we get this microorganism to do it.
 yeast
 This Scottish quick bread is often consumed with a spot of tea.
-a scone
+scone
 Sometimes called "the Mount Everest of bread baking".
 sourdough
 
@@ -210,21 +210,21 @@ penalty box
 This was the country that basketball was invented in.
 Canada
 In American football, this position is to run pass routes and get open.
-wide reciever
+a wide reciever
 There this many pool balls on a billiard table.
 16
 
 Crimes
 A term for a military revolt against authority on land as well as on ships.
-a mutiny
+mutiny
 Also known as retail theft.
 shoplifting
 Another word for different kinds of smuggling.
 running
 A number racket is the illegal counterpart of this.
-a lottery
+lottery
 The place where stolen cars are dismantled.
-a chop shop
+chop shop
 
 Dr. Seuss
 All I know is I speak for the trees.
@@ -276,12 +276,12 @@ Staples
 
 Rodents
 This African crested rodent has foot-long quills.
-a porcupine
+porcupine
 This striped squirrel can gather more than 150 acorns a day.
-a chipmunk
+chipmunk
 Alice in Wonderland could tell you this creature lives mostly in trees.
-a dormouse
+dormouse
 This 2-foot tall South American roden has webbed feet to help it swim.
-a capybara
+capybara
 Lewis and Clark called this rodent a "barking squirrel".
-a prairie dog
+prairie dog
