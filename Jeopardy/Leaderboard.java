@@ -1,15 +1,28 @@
+/**
+    Derek Ma & Kevin Zhan
+    December 25, 2021
+    Ms. Basaraba
+    Leaderboard is a custom class created to track and store the top 10 high scores of
+    all past Jeopardy games. It interacts with a file in order to store this data even
+    when the program is closed. It also includes methods to clear the leaderboard, print
+    the data stored on the leaderboard for the leaderboard page, and update the leaderboard
+    with the latest winners information. There is also a method that sorts the leaderboard
+    by implementing a variation of a bubble sort algorithm. The sorted information is then
+    saved in a separate file.
+**/
+
 import java.awt.*;
 import hsa.Console;
 import java.io.*;
 
 public class Leaderboard {
     private Console c;
-    public int scores[];
-    public String names[];
+    public int scores[]; //array to store all the scores on the leaderboard
+    public String names[]; //array to store all the names on the leaderboard
     Color fillColor = new Color(255,220,100);
   
     public Leaderboard(Console con) {
-        //initialize console
+        //initializes console
         c = con;
         //declares and initializes the integer array of the high score 
         scores = new int[11];
@@ -17,6 +30,7 @@ public class Leaderboard {
         names = new String[11];
     }//class constructor
     
+    //method that sorts the names and scores in leaderboard by highest score
     public void sortLeaderboard() throws IOException {
         //declares a FileWriter object for datafiles/Leaderboard.txt
         FileWriter fwriter = new FileWriter("dataFiles/Leaderboard.txt");
@@ -33,7 +47,7 @@ public class Leaderboard {
             }
         }
         
-        //sorting
+        //implements bubble sort algorithm
         //runs this for loop to find the empty index in the name array that the previous loop just found
         for(int i = 0; i < count - 1; i++) {
             //runs this loop to compare the score just inputted with every other score
@@ -66,7 +80,7 @@ public class Leaderboard {
         fwriter.close();
     }//end sortLeaderboard method
     
-    
+    //method that updates the leaderboard with a name and a score once a game is complete
     public void updateLeaderboard(String updateName, int updateScore) throws IOException {
         //defaults updated to false
         boolean updated = false;
@@ -90,11 +104,11 @@ public class Leaderboard {
         sortLeaderboard(); //runs the leaderboard sorting method
     }//ends updateLeaderboard method (takes a new username and score to sort onto the leaderboard)
     
-    
+    //a method that clears all leaderboard entries
     public void clearLeaderboard() throws IOException {
         //declares a FileWriter object for datafiles/Leaderboard.txt
         FileWriter fwriter = new FileWriter("dataFiles/Leaderboard.txt");
-        //for loop, which goes down the terms of the leaderboard and clears every term in the name and score loops
+        //for loop, which goes down the terms of the leaderboard and clears every term in the name and score arrays
         for(int i = 0; i < 11; i++) {
             scores[i] = 0;
             names[i] = null;
@@ -103,8 +117,9 @@ public class Leaderboard {
         fwriter.write("");
         //closes the filewriter
         fwriter.close();
-    }
+    }//ends clearLeaderboard method
     
+    //the method that displays all the scores and names on the leaderboard
     public void printLeaderboard() throws IOException {
         //declares a BufferedReader object for datafiles/Leaderboard.txt
         BufferedReader input = new BufferedReader(new FileReader("dataFiles/Leaderboard.txt"));
