@@ -1,4 +1,3 @@
-no
 Kid's Games
 Circles and crosses on a grid.
 tic tac toe
