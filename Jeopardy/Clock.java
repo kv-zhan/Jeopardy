@@ -19,7 +19,9 @@ public class Clock implements Runnable {
     boolean running; //instance variable for if the timer is running
 
     public Clock () {
+        //initializes the running variable at the start so the timer will run
         running = true;
+        //initializes console
         clockCon = new Console (16, 40, "Timer");
         clockCon.setColor (new Color (1, 55, 99));
         clockCon.fillRect (10, 10, 390, 390);
