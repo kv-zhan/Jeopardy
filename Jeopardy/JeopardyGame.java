@@ -286,7 +286,18 @@ public class JeopardyGame {
             //prompts user to enter a name
             c.print("Player 1, please enter your display name: ");
             //takes input for Player 1's name
-            playerNames[0] = c.readLine();
+            char firstChar = c.getChar();
+            char nextChar = ' ';
+            while((int)firstChar == 10) {
+                firstChar = c.getChar();
+            }
+            c.print(firstChar);
+            playerNames[0] = firstChar + "";
+            while((int)nextChar != 10) {
+                nextChar = c.getChar();
+                c.print(nextChar);
+                playerNames[0] = playerNames[0] + nextChar;
+            }
             //if the entered name is of the right length
             if (playerNames[0].length() <= 12) {
                 c.fillRect(190, 280, 600, 20);
@@ -306,7 +317,18 @@ public class JeopardyGame {
             //prompts user to enter a name
             c.print("Player 2, please enter your display name: ");
             //takes input for Player 2's name
-            playerNames[1] = c.readLine();
+            char firstChar = c.getChar();
+            char nextChar = ' ';
+            while((int)firstChar == 10) {
+                firstChar = c.getChar();
+            }
+            c.print(firstChar);
+            playerNames[1] = firstChar + "";
+            while((int)nextChar != 10) {
+                nextChar = c.getChar();
+                c.print(nextChar);
+                playerNames[1] = playerNames[1] + nextChar;
+            }
             //if the entered name is of the right length and different from Player 1's
             if (playerNames[1].length() <= 12 && !playerNames[1].equals(playerNames[0])) {
                 c.fillRect(190, 320, 600, 20);
