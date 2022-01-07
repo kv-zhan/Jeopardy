@@ -867,7 +867,7 @@ public class JeopardyGame {
                 c.setFont(new Font("MonoSpaced", Font.BOLD, 25));
                 //prompts user to enter a key
                 c.drawString("Press any key to continue", 200, 600);
-                pauseProgram(3); //callsthe  pauseProgram method for user to enter a key
+                pauseProgram(3); //calls the pauseProgram method for user to enter a key
             }
         }
     }//ends runQuestion method
