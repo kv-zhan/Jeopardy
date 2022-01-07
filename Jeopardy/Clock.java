@@ -1,6 +1,6 @@
 /**
     Derek Ma & Kevin Zhan
-    December 25, 2021
+    January 11, 2022
     Ms. Basaraba
     Clock is a custom class created for the purpose of a making a countdown timer
     when players are answering questions. This class implements Runnable in order
