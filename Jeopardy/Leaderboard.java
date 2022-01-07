@@ -1,6 +1,6 @@
 /**
     Derek Ma & Kevin Zhan
-    December 25, 2021
+    January 11, 2022
     Ms. Basaraba
     Leaderboard is a custom class created to track and store the top 10 high scores of
     all past Jeopardy games. It interacts with a file in order to store this data even
