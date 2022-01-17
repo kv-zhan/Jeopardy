@@ -936,6 +936,8 @@ public class JeopardyGame {
                     leaderboard(); //calls the leaderboard method to visit the leaderboard page
                 } else if ((input + "").toUpperCase().equals("I")) { //checks to see if <I> key was pressed
                     instructions(); //calls the instructions method to visit the instructions page
+                } else { //creates an error message if the wrong keys are pressed
+                    new Message("Invalid selection");
                 }
             }
         } else if (state == 1) {
