@@ -84,7 +84,7 @@ public class JeopardyGame {
         int increase = 0;
         title(); //calls the title method
         
-        //animates the circle shrinking into a day
+        //animates the circle shrinking into a dot
         for (int i = 0; i < 200; i++) {
             c.fillOval(-210 + i * 3, -300 + i * 3, 1200 - 6 * i, 1200 - 6 * i);
             //uses a try-catch block and a Thread.sleep to pause for 5 milliseconds
