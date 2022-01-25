@@ -1,1 +1,8 @@
-
+PlayTest1
+7500
+PlayTest2
+5000
+PlayTest3
+2000
+PlayTest4
+1000
